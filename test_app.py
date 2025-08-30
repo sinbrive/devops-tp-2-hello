@@ -7,6 +7,4 @@ def test_home():
     assert response.status_code == 200
     assert response.data == b"Hello, eKod!"
 
-
-if __name__ == '__main__':
-    test_home()
+    
