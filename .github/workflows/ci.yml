@@ -27,12 +27,12 @@ jobs:
       - name: Run pytest (unit tests)
         run: pytest -v
 
-  docker-build:
-    runs-on: ubuntu-latest
-    needs: lint-test
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+  # docker-build:
+  #   runs-on: ubuntu-latest
+  #   needs: lint-test
+  #   steps:
+  #     - name: Checkout repo
+  #       uses: actions/checkout@v3
 
-      - name: Build Docker image
-        run: docker build -t devops-tp2-hello .
+  #     - name: Build Docker image
+  #       run: docker build -t devops-tp2-hello .

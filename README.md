@@ -14,3 +14,16 @@ Il est fait usage de conteneur.
    docker exec -it devops-tp bash
 
 4. Créer une branche, coder, tester (pytest), commit & push puis ouvrir une PR.
+   Actions :
+      - git checkout -b feature-newroute
+      - pytest -v
+      - flake8 app.py tests/
+      - python app.py
+      - Consigne : ajouter le route `/hello/<name>`
+         - retester et executer app.py comme ci-dessus
+
+
+---
+
+test prof sur VM
+
