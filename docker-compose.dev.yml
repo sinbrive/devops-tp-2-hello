@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  devops-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: devops-lab-dev
+    volumes:
+      - .:/home/student/app
+    stdin_open: true
+    tty: true
