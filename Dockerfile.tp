@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends `
 
 RUN useradd -ms /bin/bash student
 USER student
-WORKDIR /home/student/app
+WORKDIR /home/app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
