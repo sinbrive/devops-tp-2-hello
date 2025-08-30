@@ -25,7 +25,7 @@ jobs:
         run: flake8 --max-line-length=100 app.py tests/
 
       - name: Run pytest (unit tests)
-        run: python test_app.py 
+        run: pytest -v 
 
   # docker-build:
   #   runs-on: ubuntu-latest
