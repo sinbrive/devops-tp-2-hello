@@ -1,18 +1,15 @@
 # FICHE – CD DEVOPS 
 
-> Lorsque la livraison de toutes les parties est fusionnée, vous allez procéder au déploiement de l'image sur votre compte Docker Hub.
+> Lorsque toutes les livraisons sont fusionnées, vous allez procéder au déploiement de l'image sur votre compte Docker Hub.
 
-Travail à faire
----
-
+## Travail à faire
 1. Synchronier votre dépôt avec la version finale du formateur 
 
 
 2. Initialiser les Secrets dans Github
     - générer votre token Docker Hub
     - enregistrer DOCKER_USERNAME et DOCKERHUB_TOKEN dans Github
-
-2. Compléter le ci.yml par les instructions suivantes
+3. Compléter le ci.yml par les instructions suivantes
 
 ```yml
   docker-build:
@@ -35,12 +32,12 @@ Travail à faire
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-tp
 
 ```
-3. faire un push
+4. faire un push
 
-4. si tout se passe bien, votre nouvelle image est sur Docker Hub
+5. si tout se passe bien, votre nouvelle image est sur Docker Hub
 
-5. tester cette image en local
+6. tester cette image en local
     - docker pull docker.io/<user>/devops-tp:latest
-    - docker run -d - p 5001:5000 <id_de_votre_image_telechargee>
+    - docker run -d -p 5001:5000 <id_de_votre_image_telechargee>
     - tester : curl localhost:5001
     - vérifier sur le navigateur

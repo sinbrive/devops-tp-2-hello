@@ -24,6 +24,6 @@ jobs:
       - name: Run flake8 (linting)
         run: flake8 --max-line-length=100 app.py test_app.py
 
-      - name: Run pytest (unit tests)
+      - name: Run pytest (tests unitaires)
         run: pytest -v 
 
